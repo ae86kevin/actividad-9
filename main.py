@@ -1,5 +1,13 @@
 Dviajes = {}
 
+
+def contadordestinos(viajes):
+    if viajes =="":
+        return 0
+    else:
+        return viajes.count("destino")
+
+
 seleccion = ""
 while seleccion != "0":
     print("\nmenu principal")
@@ -22,19 +30,24 @@ while seleccion != "0":
             for j in range(cantidadDestinos):
                 destino = input(f"Ingrese el nombre del destino {j + 1}: ")
 
-
-
-
+                Dviajes[codigo]["viajes"][destino] = {"nombre del destino": destino}
 
     elif seleccion == "2":
         print("\nListado de clientes y destinos visitados:")
 
         for codigo, datos in Dviajes.items():
-            print(f"\nCódigo: {codigo}")
+            print(f"\nCodigo: {codigo}")
             print(f"Nombre: {datos['nombre']}")
-            print("Destinos visitados:")
-            for destino, duracion in datos["viajes"].items():
-                print(f" {destino}:")
+            print("Destinos")
+            for destino, a in datos["viajes"].items():
+                print(f"Nombre del destino: {a['nombre del destino']}")
 
-    elif s
+
+        print(f"cantidad de viajes visitados: {contadordestinos(datos)}"
+
+
+
+
+
+
 
